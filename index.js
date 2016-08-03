@@ -260,6 +260,7 @@ class DatePicker extends Component {
                   <DatePickerIOS
                     date={this.state.date}
                     mode={this.props.mode}
+                    minuteInterval={this.props.minuteInterval}
                     minimumDate={this.props.minDate && this.getDate(this.props.minDate)}
                     maximumDate={this.props.maxDate && this.getDate(this.props.maxDate)}
                     onDateChange={(date) => this.setState({date: date})}
@@ -326,7 +327,8 @@ DatePicker.propTypes = {
   showIcon: React.PropTypes.bool,
   disabled: React.PropTypes.bool,
   onDateChange: React.PropTypes.func,
-  placeholder: React.PropTypes.string
+  placeholder: React.PropTypes.string,
+  minuteInterval: React.PropTypes.number,
 };
 
 export default DatePicker;
